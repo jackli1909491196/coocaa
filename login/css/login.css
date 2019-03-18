@@ -1,0 +1,245 @@
+@charset "utf-8";
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,td,input,select,option,textarea{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family:"微软雅黑";
+	margin: 0 auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+	overflow: hidden;
+}
+html{
+	overflow-y: auto;
+}
+ul,ol{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	display: block;
+	border:none;
+}
+div{
+	display: block;
+}
+
+
+.header{
+	width: 100%;
+	height: 105px;
+	background-color:#ffffff;
+}
+.header-coocaa{
+	padding-top: 70px;
+	width: 1000px;
+	height: 35px;
+	margin:0 auto;
+	background-color: #ffffff;
+}
+.header-coocaa a{
+	display: block;
+	height: 35px;
+}
+.header-coocaa a img{
+	float: left;
+	width: 180px;
+	height: 21px;
+}
+.reg-content{
+	background: url(../img/bg.jpg) no-repeat center;
+	height: 503px;
+	position: relative;
+}
+.reg-coocaa-one{
+	width: 340px;
+	height: 303px;
+	background: rgba(255,255,255,.9);
+	position: absolute;
+	top: 10%;
+	left: 60%;
+	border: 1px solid pink;
+	z-index: 999;
+}
+.phone-reg{
+	width: 170px;
+	height: 38px;
+	float: left;
+}
+.reg-a a{
+	display: block;
+	width: 168px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	color: #fc4c02;
+	border: 1px solid pink;
+	border-left: none;
+	border-top: none;
+}
+.normal-reg{
+	width: 170px;
+	height: 38px;
+	float: left;
+}
+.phone-reg-content{
+	width: 274px;
+    margin: auto;
+    margin-top: 38px;
+
+}
+#phone-number{
+	width: 270px;
+	height: 38px;
+	margin-top: 30px;
+}
+.code-in{
+	width: 270px;
+	height: 38px;
+	margin-top: 10px;
+	position: relative;
+}
+.reg-content input{
+	text-indent: 15px;
+}
+.code-in-one input{
+	width: 270px;
+	height: 38px;
+	float: left;
+	line-height: 38px;
+}
+.code-in-two{
+	float: right;
+	position: absolute;
+	right: 0;
+}
+.code-in-two img{
+	width: 80px;
+	height: 40px;
+}
+.message-code{
+	width: 270px;
+	height: 40px;
+	margin-top: 15px;
+}
+.message-code input{
+	width: 59%;
+	height: 38px;
+	float: left;
+	color: initial;
+}
+.message-code button{
+	width: 36%;
+	display: inline-block;
+    background-color: #f6f6f6;
+    font-size: 13px;
+    float: right;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #d1d1d1;
+    cursor: pointer;
+	float: right;
+	margin-right: -3px;
+}
+.wrong{
+	width: 274px;
+	height: 16px;
+	line-height: 16px;
+	font-size: 12px;
+	text-indent: 20px;
+	background: url(../img/warn.png) no-repeat ;
+	margin:10px auto;
+    color: #fc0202;
+}
+.phone-reg-content-two input{
+	width: 274px;
+	height: 42px;
+	line-height: 42px;
+	text-align: center;
+	font-size: 16px;
+	color: #ffffff;
+	background-color: #fc4c02;
+	border-radius: 4px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+#password{
+	width: 270px;
+	height: 38px;
+	margin-top: 10px;
+}
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.password-x{
+	font-size: 12px;
+	margin-left: 5px;
+	line-height: 14px;
+	color: #7d7d7d;
+	float: left;
+}
+.password-y{
+	float: right;
+	line-height: 14px;
+}
+.password-y a{
+	font-size: 12px;
+	color:#39b7ff;
+	margin-left: 65px;
+}
+.reg-coocaa-one{
+	display: none;
+}
+.reg-coocaa-two{
+	width: 340px;
+	height: 375px;
+	background: rgba(255,255,255,.9);
+	position: absolute;
+	top: 25%;
+	left: 60%;
+	border: 1px solid pink;
+	z-index: 999;
+	/*display: none;*/
+}
+.password-top{
+	float: left;
+}
+.password-bottom{
+	float: left;
+	margin-top:15px;
+}
+.phone-social span{
+	float: left;
+	font-size: 12px;
+    color: #7d7d7d;
+     height: 30px;
+    line-height: 30px;
+}
+.phone-social a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    margin-left: 12px;
+    background: url(../img/qqwb2.png) no-repeat;
+    width: 30px;
+}
+.phone-social .weixin{
+	background-position: -78px -32px;
+}
+.phone-social .qq{
+	background-position: 0px -32px;
+}
+.phone-social .weibo{
+	background-position: -42px -32px;
+}
