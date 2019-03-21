@@ -88,7 +88,9 @@ div{
 	display: none;
 	z-index: 1000;
 }
-
+.header-nav a:hover{
+	color: #fc4c02;
+	}
 .header-nav-one ul{
 	width:105px ;
 	text-align: center;
@@ -328,6 +330,12 @@ div{
 	height: 460px;
 	float:left;
 }
+.nav-other-tv a:hover{
+	color: #fc4c02;
+	}
+.nav-other-tv a span:hover{
+	color: #fc4c02;
+	}
 .nav-one-left a{
 	flex:1;
 }

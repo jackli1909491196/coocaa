@@ -63,7 +63,6 @@ div{
 	top: 10%;
 	left: 60%;
 	border: 1px solid pink;
-	z-index: 999;
 }
 .phone-reg{
 	width: 170px;
@@ -96,6 +95,10 @@ div{
 	width: 270px;
 	height: 38px;
 	margin-top: 30px;
+}
+#phone-number2{
+	width: 270px;
+	height: 38px;
 }
 .code-in{
 	width: 270px;
@@ -197,19 +200,14 @@ dl {
 	color:#39b7ff;
 	margin-left: 65px;
 }
-.reg-coocaa-one{
-z-index: 9999;
-}
-.reg-coocaa-two{
+#reg-coocaa-two{
 	width: 340px;
-	height: 375px;
+	height: 355px;
 	background: rgba(255,255,255,.9);
 	position: absolute;
-	top: 25%;
+	top: 40%;
 	left: 60%;
 	border: 1px solid pink;
-	z-index: 999;
-	/*display: none;*/
 }
 .password-top{
 	float: left;

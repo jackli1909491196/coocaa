@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>shoppingCar-酷开商城</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/shoppingCar.css">
+<body>
+
+<!-- header部分 -->
+	<div class="header">
+		<div class="header-top-con">
+			<div class="header-top">
+				<div class="header-left">
+					<a href="#">酷开导航</a>
+					<img src="img/nav.jpg">
+					<div class="header-nav">
+						<ul>
+							<li class="header-nav-one">
+								<ul>
+									<li><p>主题频道</p></li>
+									<li><a href="#">电视</a></li>
+									<li><a href="#">电视</a></li>
+									<li><a href="#">电视</a></li>
+								</ul>
+							</li>
+							<li class="header-nav-one" >
+								<ul>
+									<li><p>主题频道</p></li>
+									<li><a href="#">电视</a></li>
+									<li><a href="#">电视</a></li>
+									<li><a href="#">电视</a></li>
+									<li><a href="#">电视</a></li>
+								</ul>
+							</li>
+							<li class="header-nav-one">
+								<ul>
+									<li><p>主题频道</p></li>
+									<li><a href="#">电视</a></li>
+									<li><a href="#">电视</a></li>
+									<li><a href="#">电视</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header-right">
+					<div class="header-login"><a href="#">登录</a></div>		
+					<img src="img/top1.jpg">
+					<div class="header-registered"><a href="#">免费注册</a></div>
+					<div class="header-order"><a href="#">我的订单</a></div>
+					<div class="header-kefu"><a href="#">联系客服</a></div>
+					<div class="phoneShopping"><a href="#">手机商城</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="header-bottom-con">
+			<div class="header-bottom">
+				<div class="header-bottom-one">
+					<div class="header-bottom-log fl">
+						<a href="#">
+							<img class="fl" src="img/logo.png">
+							<span class="myCar fl">我的购物车</span>
+						</a>
+					</div>
+					 <div class="stepflex fr">
+					 	<span class="cur">我的购物车<em>&gt;</em></span>
+					 	<span>填写核对订单信息<em>&gt;</em></span>
+					 	<span>订单提交成功</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!-- bodyPage部分 -->
+<div class="bodyPage-con">
+	<div class="bodyPage">
+	    <div id="no_goods" class="no_goods cf">
+	        <div class="img"><img src="//img2.coocaa.com/ui/shoppc/v3.4.16/web3.0/images/no_goods.jpg" /></div>
+	        <div class="no_goods_fr">
+	            <div class="no_goods_titile">购物车是空的哦！</div>
+	            <div class="no_goods_1" style="display: none;">登录后将显示您之前加入的商品</div>
+	            <div class="no_goods_btn">
+	                <a href="" class="user_login" style="display: none;">立即登录</a>
+	                <a href="/goods/list.html">马上去购物</a>
+	            </div>
+	        </div>
+	    </div>
+
+	    <div id="have_goods" style="display: none;">
+	        <div class="cartList">
+	            <div class="cartListHead cf">
+	                <div class="select selected fl"><span></span><em>全选</em></div>
+	                <div class="unitPrice fl">单价（元）</div>
+	                <div class="number fl">数量</div>
+	                <div class="amount fl">小计（元）</div>
+	                <div class="operation fl">操作</div>
+	            </div>
+	            <div class="cartListBody">
+	                <ul>
+	                </ul>
+	            </div>
+	        </div>
+
+	        <div id="fareBuy" style="display: none;">
+	            <div class="fareBuyList cf">
+	                <div class="label">加价购</div>
+	                <div id="fareBuyList"></div>
+	            </div>
+	        </div>
+
+	        <div class="Settlem cf">
+	            <div class="fl Settlemfl">
+	                <a href="/goods/list.html">继续购物</a>
+	                <span class="choice">已选择<i id="goodsNum">0</i>件商品</span>
+	            </div>
+	            <div class="fr Settlemfr">
+	                <span class="total_money"><em>总计（不含运费）：</em><span class="price_total" id="price_total">0.00</span><em>&nbsp;元</em></span>
+	                <span class="jiesuan" id="jiesuan">去结算</span >
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+<!-- tv-footer部分 -->
+	<div class="tv-footer-con">
+		<div class="tv-footer">
+			<div class="tv-footer-service">
+				<ul>
+					<li>
+						<img class="img" src="img/service1.jpg">
+						<div class="titlt-con">
+							<p class="title">全场包邮</p>
+							<p>商品免费送到家</p>
+						</div>
+					</li>
+					<li>
+						<img class="img" src="img/service2.jpg">
+						<div class="titlt-con">	
+							<p class="title">质量保证</p>
+							<p>享受国家三包政策</p>
+						</div>
+					</li>
+					<li>
+						<img class="img" src="img/service3.jpg">
+						<div class="titlt-con">
+							<p class="title">权益保障</p>
+							<p>7天包退，十五天包换</p>
+						</div>
+					</li>
+					<li>
+						<img class="img" src="img/service4.jpg">
+						<div class="titlt-con">	
+							<p class="title">4950家售后服务网点</p>
+							<p>实时上门服务</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="tv-footer-link">
+				<div class="tv-footer-link-left">
+					<ul>
+						<li class="link-title">帮助中心</li>
+						<li><a href="">新手指南</a></li>
+						<li><a href="">支付方式</a</li>
+						<li><a href="">物流配送</a></li>
+						<li><a href="">税票制度</a></li>
+					</ul>
+					<ul>
+						<li class="link-title">服务与支持</li>
+						<li><a href="">安装维修</a></li>
+						<li><a href="">售后政策</a></li>
+						<li><a href="">延保服务</a></li>
+						<li><a href="">收费标准</a></li>
+					</ul>
+					<ul>
+						<li class="link-title">玩机手册</li>
+						<li><a href="">新手指南</a></li>
+						<li><a href="">应用下载</a></li>
+						<li><a href="">电视玩法</a></li>
+						<li><a href="">ROM下载</a></li>
+					</ul>
+					<ul>
+						<li class="link-title">品牌相关</li>
+						<li><a href="">酷开简介</a></li>
+						<li><a href="">新闻动态</a></li>
+						<li><a href="">品牌授权</a></li>
+						<li><a href="">加入我们</a></li>
+					</ul>
+				</div>
+				<div class="tv-footer-link-right">
+					<div class="phone-number">9510 5555</div>
+					<div class="sale-after">售后服务热线</div>
+					<div class="lin-que">
+						<a href="#">
+							<img src="img/lixi.jpg">
+							<p>在线咨询</p>
+						</a>
+					</div>
+					<div class="attentionOur">
+						<ul>
+							<li>
+								<img src="img/weibo.jpg">
+								<p>关注微博</p>
+							</li>
+							<li>
+								<img src="img/weixin.jpg">
+								<p>关注微信</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- tv-footer-bottom部分 -->
+	<div class="tv-footer-bottom-con">
+		<div class="tv-footer-bottom">
+			<div class="bottom-left">
+				<div class="bottom-left-one">© COOCAA · 川网文【2011】 0579-016号 · ICP备案证号：<a href="#"> 川B2-20120050</a></div>
+				<div class="bottom-left-two">
+					<img src="img/beian_icon.png">
+					<a href="#">川公网安备 51019002000943号</a>
+				</div>
+			</div>
+			<div class="bottom-right">
+				<ul>
+					<li>
+						<img src="img/bottom1.jpg">
+						<span>网上交易<br>保障中心</span>
+					</li>
+					<li>
+						<img src="img/bottom2.jpg">
+						<span>可信网站<br>信用评价</span>
+					</li>
+					<li>
+						<img src="img/bottom3.jpg">
+						<span>深圳网络警察<br>报警平台</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

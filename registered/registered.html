@@ -5,6 +5,7 @@
 	<title>酷开注册</title>
 </head>
 <link rel="stylesheet" type="text/css" href="css/registered.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
 <body>
 	<div class="header">
 		<div class="header-coocaa">
@@ -20,9 +21,9 @@
 				<a href="#" id="phone-reg-one">手机验证登录</a>
 			</div>
 			<div class="normal-reg reg-a">
-				<a href="#" id="phone-reg-two">普通登录</a>
+				<a href="#" id="phone-reg-two">注册</a>
 			</div>
-			<div class="reg-coocaa-content">
+			<div class="reg-coocaa-content" id="reg-coocaa-one" style="display: none;">
 				<div class="phone-reg-content">
 					<div class="phone-reg-content-one">
 						<ul>
@@ -53,43 +54,36 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="reg-coocaa reg-coocaa-two">
-			<div class="phone-reg reg-a">
-				<a href="#" id="phone-reg-one">手机验证登录</a>
-			</div>
-			<div class="normal-reg reg-a">
-				<a href="#" id="phone-reg-two">普通登录</a>
-			</div>
-			<div class="reg-coocaa-content">
+			<div class="reg-coocaa-content"  id="reg-coocaa-two" style="display: black;">
 				<div class="phone-reg-content">
-					<div class="phone-reg-content-one">
-						<ul>
-							<li>
-								<input type="text" name="" placeholder="手机号（新用户登录即注册）" id="phone-number">
-							</li>
+					<form method="post" action="regSave.php">
+						<div class="phone-reg-content-one">
+							<ul>
+								<li>
+									<input type="text" name="userId" placeholder="手机号（新用户注册）" id="phone-number2">
+								</li>
 
-							<li>
-								<input type="password" name="" placeholder="请输入密码" id="password">
-							</li>
+								<li>
+									<input type="password" name="userPass" placeholder="请输入密码" id="password">
+								</li>
 
-							<li >
-								<div class="code-in">
-									<div class="code-in-one">
-										<input type="text" name="" placeholder="验证码">
+								<li >
+									<div class="code-in">
+										<div class="code-in-one">
+											<input type="text" name="" placeholder="验证码">
+										</div>
+										<div class="code-in-two">
+											<img src="img/sms-code.png" alt="">
+										</div>
 									</div>
-									<div class="code-in-two">
-										<img src="img/sms-code.png" alt="">
-									</div>
-								</div>
-							</li>
-							
-						</ul>
-					</div>
-					<div class="phone-reg-content-two">
-						<div class="wrong">请先输入您的手机号</div>
-						<input type="submit" value="登录" class="submit">
-					</div>
+								</li>
+							</ul>
+						</div>
+						<div class="phone-reg-content-two">
+							<div class="wrong">请先输入您的手机号</div>
+							<input type="submit" value="注册" class="submit" id="submit">
+						</div>
+					</form>
 					<dl>
 						<dt class="password-top">
 							<div class="password-x none">
@@ -111,14 +105,83 @@
 				</div>
 				</div>
 			</div>
-		</div>
-
 	</div>
+
+	<!-- tv-footer-bottom部分 -->
+	<div class="tv-footer-bottom-con">
+		<div class="tv-footer-bottom">
+			<div class="bottom-left">
+				<div class="bottom-left-one">© COOCAA · 川网文【2011】 0579-016号 · ICP备案证号：<a href="#"> 川B2-20120050</a></div>
+				<div class="bottom-left-two">
+					<img src="img/beian_icon.png">
+					<a href="#">川公网安备 51019002000943号</a>
+				</div>
+			</div>
+			<div class="bottom-right">
+				<ul>
+					<li>
+						<img src="img/bottom1.jpg">
+						<span>网上交易<br>保障中心</span>
+					</li>
+					<li>
+						<img src="img/bottom2.jpg">
+						<span>可信网站<br>信用评价</span>
+					</li>
+					<li>
+						<img src="img/bottom3.jpg">
+						<span>深圳网络警察<br>报警平台</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript">
-	$("#phone-reg-one").mousedown(function(){
- 	$(".reg-coocaa-one").show();
+	$(document).ready(function(){
+    $('#phone-reg-two').bind('click', function() {
+        $('#reg-coocaa-one').css({ "display":"none"});
+        $('#reg-coocaa-two').css({ "display":"block"});
+    });
+    $('#phone-reg-one').bind('click', function() {
+        $('#reg-coocaa-one').css({ "display":"block"});
+        $('#reg-coocaa-two').css({ "display":"none"});
+    });
 });
+
+
+	window.onload = function(){
+	// 注册跳转界面
+	getTag("#submit").onclick = function(){
+		let xhr = new XMLHttpRequest();
+		xhr.open("post","regSave.php",true);
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState ==4 && xhr.status ==200){
+				if(xhr.responseText =="1"){
+					window.location.href = "../login/login.html";
+				}else{
+					alert("注册失败");
+				}
+			}
+		}
+		//4.发送请求
+		//如果是post的话，必须设置请求头
+		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");//设置请求头
+
+		xhr.send(`userId=${getTag("#userId").value}&userPass=${getTag("#userPass").value}`);//键值对，要跟后端交流的，后端根据键取值
+	}
+}
+  
+
+function getTag(str){
+	if(str.charAt(0)=="#"){
+		return document.getElementById(str.substring(1));
+	}else if(str.charAt(0)=="."){
+		return document.getElementsByClassName(str.substring(1));
+	}else{
+		return document.getElementsByTagName(str);
+	}
+}	
 </script>
